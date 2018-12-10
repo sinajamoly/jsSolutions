@@ -6,17 +6,27 @@ const URL2 = 'https://jsonplaceholer.typicode.com/todos/1'; //wrong url
 
 
 const getWeather = (url) => {
-    promises.push(fetch(url));
+    return fetch(url);
 };
 
+const addFetch = (promise) => {
+    promises.push(promise);
+}
 
-getWeather(URL);
-getWeather(URL);
-getWeather(URL2);
-getWeather(URL);
-getWeather(URL2);
-getWeather(URL);
 
+// getWeather(URL);
+// getWeather(URL);
+// getWeather(URL2);
+// getWeather(URL);
+// getWeather(URL2);
+// getWeather(URL);
+
+
+addFetch(getWeather(URL));
+addFetch(getWeather(URL2));
+addFetch(getWeather(URL));
+addFetch(getWeather(URL));
+addFetch(getWeather(URL2));
 
 // Promise.all(promises).then((response) => {
 //     console.log(response);
