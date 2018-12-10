@@ -1,13 +1,13 @@
 
 const promises = [];
 
-const URL = 'https://jsonplaceholder.typicode.com/todos/1';
-const URL2 = 'https://jsonplaceholer.typicode.com/todos/1';
+const URL = 'https://jsonplaceholder.typicode.com/todos/1'; // correct url
+const URL2 = 'https://jsonplaceholer.typicode.com/todos/1'; //wrong url
 
 
 const getWeather = (url) => {
     promises.push(fetch(url));
-}
+};
 
 
 getWeather(URL);
